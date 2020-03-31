@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ngh-c5-hNV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dog List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DogListViewController" customModule="ListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gur-3c-gGO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gur-3c-gGO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AOv-lU-bZ1"/>
+                            <constraint firstItem="Gur-3c-gGO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="E5j-Ca-5fZ"/>
+                            <constraint firstItem="Gur-3c-gGO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FtB-Ya-yae"/>
+                            <constraint firstItem="Gur-3c-gGO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aqr-Zs-sbA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iJ9-ao-Tpj"/>
+                    <connections>
+                        <outlet property="tableView" destination="Gur-3c-gGO" id="jWN-ej-Xps"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="143.97321428571428"/>
+        </scene>
+        <!--Dog Details View Controller-->
+        <scene sceneID="3k7-l4-FXk">
+            <objects>
+                <viewController storyboardIdentifier="idDogDetailsViewController" id="qRM-PW-66E" customClass="DogDetailsViewController" customModule="ListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HuV-W9-i3w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sau-r2-4xR">
+                                <rect key="frame" x="175" y="431.5" width="64" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-qt-efp">
+                                <rect key="frame" x="87" y="504.5" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Gcg-Kq-Pmo"/>
+                                    <constraint firstAttribute="width" secondItem="uhJ-qt-efp" secondAttribute="height" multiplier="15:8" id="gsx-vI-dC4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uhJ-qt-efp" firstAttribute="top" secondItem="Sau-r2-4xR" secondAttribute="bottom" constant="40" id="AdI-Bp-BKO"/>
+                            <constraint firstItem="Sau-r2-4xR" firstAttribute="centerX" secondItem="HuV-W9-i3w" secondAttribute="centerX" id="gVr-eS-9v8"/>
+                            <constraint firstItem="uhJ-qt-efp" firstAttribute="centerX" secondItem="HuV-W9-i3w" secondAttribute="centerX" id="hjP-0e-trF"/>
+                            <constraint firstItem="Sau-r2-4xR" firstAttribute="centerY" secondItem="HuV-W9-i3w" secondAttribute="centerY" id="v32-UP-37M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FOD-5U-cde"/>
+                    </view>
+                    <connections>
+                        <outlet property="dogImageView" destination="uhJ-qt-efp" id="MR9-C1-gK9"/>
+                        <outlet property="dogNicknameLabel" destination="Sau-r2-4xR" id="FZZ-2C-Y27"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Kg-Cx-crd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1998.5507246376812" y="141.96428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hx3-bT-svD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ngh-c5-hNV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f83-V9-Uov">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jv9-W0-e7g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdN-3I-sFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="143.97321428571428"/>
+        </scene>
+    </scenes>
+</document>
